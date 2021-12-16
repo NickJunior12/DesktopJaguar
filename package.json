@@ -37,6 +37,7 @@
     "apexcharts": "^3.23.1",
     "bootstrap": "^4.5.3",
     "chart.js": "^2.9.4",
+    "cloudinary": "^1.27.1",
     "cropperjs": "^1.5.9",
     "feather-icons": "^4.28.0",
     "flag-icon-css": "^3.5.0",

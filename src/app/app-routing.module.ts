@@ -22,6 +22,10 @@ const routes: Routes = [
         loadChildren: () => import('./views/pages/noticias/noticias.module').then(m => m.NoticiasModule)
       },
       {
+        path: 'noticia-detalle',
+        loadChildren: () => import('./views/pages/noticia-detalle/noticia-detalle.module').then(m => m.NoticiaDetalleModule)
+      },
+      {
         path: 'apps',
         loadChildren: () => import('./views/pages/apps/apps.module').then(m => m.AppsModule)
       },

@@ -4,12 +4,11 @@
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="http://localhost:8000/uploadsBanners/Slides-Jaguar1.jpg" class="d-block w-100" alt="...">
+                        <img src="https://res.cloudinary.com/dcjspxg4i/image/upload/v1639694876/hnjx3zjbmhbwnavtm8ni.jpg" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item">
-                        <img src="http://localhost:8000/uploadsBanners/Slides-Jaguar2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item" *ngFor="let ban of listaBanners">
+                        <img src="{{ ban.archivo }}" class="d-block w-100" alt="...">
                     </div>
-
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -44,7 +43,7 @@
                     <span>Noticias</span>
                     <div class="row mt-3 fs-6 text" *ngFor="let noti of listaNoticias | slice:0:3" style="border-top:3px solid #F3AF4F;">
                         <div class="col-lg-4 mt-3">
-                            <img src="http://localhost:8000/uploadsNoticias/{{ noti.imagen }}" class="img-fluid img-thumbnail">
+                            <img src="{{ noti.imagen }}" class="img-fluid img-thumbnail">
                         </div>
                         <div class="col-lg-8 mt-3">
                             <p class="text-start"><strong>{{ noti.titulo | uppercase }}</strong><br></p>

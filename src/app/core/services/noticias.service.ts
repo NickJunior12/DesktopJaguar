@@ -12,11 +12,11 @@ export class NoticiasService {
    }
 
    getNoticias(): Observable<any> {
-    return this.http.get<any>('http://localhost:8000/api/nots');
+    return this.http.get<any>('https://backend-jaguar.herokuapp.com/api/nots');
   }
 
   getNoticia(id: string): Observable<any> {
-    return this.http.get<any>('http://localhost:8000/api/nots/' + id);
+    return this.http.get<any>('https://backend-jaguar.herokuapp.com/api/nots/' + id);
   }
 }
 
