@@ -22,8 +22,12 @@ const routes: Routes = [
         loadChildren: () => import('./views/pages/noticias/noticias.module').then(m => m.NoticiasModule)
       },
       {
-        path: 'noticia-detalle',
+        path: 'noticia-detalle/:id',
         loadChildren: () => import('./views/pages/noticia-detalle/noticia-detalle.module').then(m => m.NoticiaDetalleModule)
+      },
+      {
+        path: 'resultado-buscador/:texto',
+        loadChildren: () => import('./views/pages/resultado-buscador/resultado-buscador.module').then(m => m.ResultadoBuscadorModule)
       },
       {
         path: 'apps',

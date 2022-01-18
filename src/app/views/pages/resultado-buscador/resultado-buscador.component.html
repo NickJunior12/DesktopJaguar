@@ -1,0 +1,21 @@
+<div class="container mt-9">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card" style="background-color:black;opacity:0.7;color:white!important">
+                <div class="card-body text-center">
+                    <span>NOTICIAS</span>
+
+                    <div class="row mt-4" *ngFor="let noti of listaNoticias" style="border-top:3px solid #F3AF4F">
+                        <div class="col-lg-4 mt-2"><img src="{{ noti.imagen }}" class="img-fluid img-thumbnail"></div>
+                        <div class="col-lg-3 mt-2 text-start">{{ noti.titulo | uppercase }}</div>
+                        <div class="col-lg-5 mt-2 text-start">{{ noti.descripcion }}</div>
+                        <div class="col-lg-12 mt-4">
+                            <p class="text-end"><a href="noticia-detalle/{{noti.id}}" style="color:#F3AF4F">Leer completo...</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

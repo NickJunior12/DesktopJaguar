@@ -1,1 +1,22 @@
-<p>noticia-detalle works!</p>
+<div class="container mt-9">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card" style="background-color:black;opacity:0.7;color:white!important">
+                <div class="card-body text-center">
+                    <span>{{this.noticia.titulo | uppercase}}</span>
+
+                    <div class="row mt-4" style="border-bottom:3px solid #F3AF4F">
+                        <div class="col-lg-12 mt-2"><img src="{{ this.noticia.imagen }}" class="img-fluid img-thumbnail"></div>
+
+                        <div class="col-lg-12 mt-2 text-start">{{ this.noticia.descripcion }}</div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-12">
+                            <button routerLink='/noticias' class="btn btn-secondary btn-lg float-end">Regresar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

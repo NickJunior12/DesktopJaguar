@@ -12,7 +12,7 @@ export const MENU: MenuItem[] = [
   },
   {
     label: 'Noticias',
-    icon: 'home',
+    icon: 'message-circle',
     link: '/noticias'
   },
   {
@@ -21,23 +21,23 @@ export const MENU: MenuItem[] = [
   },
   {
     label: 'Workplace',
-    icon: 'message-square',
-    link: '/apps/chat',
+    icon: 'facebook',
+    link: '/',
   },
   {
     label: 'Potentor',
-    icon: 'message-square',
-    link: '/apps/chat',
+    icon: 'clipboard',
+    link: '/',
   },
   {
     label: 'P2',
-    icon: 'message-square',
-    link: '/apps/chat',
+    icon: 'book',
+    link: '/',
   },
   {
     label: 'Appleton',
     icon: 'book-open',
-    link: '/apps/chat',
+    link: '/',
   }
 
 ];
