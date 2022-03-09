@@ -1,10 +1,43 @@
+<style>
+    .pet {
+        position: fixed;
+        left: 5%;
+        top: 60%;
+        z-index: 3!important;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .petImg {
+        width: 200px;
+    }
+    
+    @media (min-width: 1300px) {
+        .pet {
+            position: fixed;
+            left: 3%;
+            top: 72%;
+            z-index: 3!important;
+            width: 200px;
+            height: 200px;
+        }
+        .petImg {
+            width: 250px;
+        }
+    }
+</style>
 <div class="main-wrapper">
 
+    <div class="pet">
+        <img src="https://interacthink.com/jaguar/desktop/assets/images/Conejito-Saludo.gif" class="petImg">
+    </div>
     <!-- partial:sidebar -->
-    <app-sidebar></app-sidebar>
+    <app-sidebar style="z-index: 2;"></app-sidebar>
     <!-- partial -->
 
-    <div class="page-wrapper">
+
+
+    <div class="page-wrapper" style="z-index: 1;">
 
         <!-- partial:navbar -->
         <app-navbar></app-navbar>
