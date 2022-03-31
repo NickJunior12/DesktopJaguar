@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthComponent } from './auth.component';
 import { FormsModule } from '@angular/forms';
+import { AuthssoComponent } from './authsso/authsso.component';
 
 const routes: Routes = [
   {
@@ -23,13 +24,17 @@ const routes: Routes = [
       {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path: 'authsso/:code/:nonce',
+        component: AuthssoComponent
       }
     ]
   },
 ]
 
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, AuthComponent],
+  declarations: [LoginComponent, RegisterComponent, AuthComponent, AuthssoComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

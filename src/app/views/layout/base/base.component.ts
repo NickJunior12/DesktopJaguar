@@ -9,6 +9,7 @@ import { Router, RouteConfigLoadStart, RouteConfigLoadEnd } from '@angular/route
 export class BaseComponent implements OnInit {
 
   isLoading: boolean;
+  imagenMascota: string;
 
   constructor(private router: Router) { 
 
@@ -24,7 +25,21 @@ export class BaseComponent implements OnInit {
     
   }
 
+  cambiarMascota() {
+    if(this.imagenMascota === "https://interacthink.com/jaguar/desktop/assets/images/Carita.gif"){
+      this.imagenMascota = "https://interacthink.com/jaguar/desktop/assets/images/saludo-Ok.gif";
+    }
+    else if(this.imagenMascota === "https://interacthink.com/jaguar/desktop/assets/images/saludo-Ok.gif"){
+      this.imagenMascota = "https://interacthink.com/jaguar/desktop/assets/images/Conejito.gif";
+    }
+    else{
+      this.imagenMascota = "https://interacthink.com/jaguar/desktop/assets/images/Carita.gif";
+    }
+    
+  }
+
   ngOnInit(): void {
+    this.imagenMascota = "https://interacthink.com/jaguar/desktop/assets/images/Conejito.gif";
   }
 
 }

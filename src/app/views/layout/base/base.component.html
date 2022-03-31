@@ -1,7 +1,7 @@
 <style>
     .pet {
         position: fixed;
-        left: 5%;
+        left: 3%;
         top: 60%;
         z-index: 3!important;
         width: 200px;
@@ -29,7 +29,8 @@
 <div class="main-wrapper">
 
     <div class="pet">
-        <img src="https://interacthink.com/jaguar/desktop/assets/images/Conejito-Saludo.gif" class="petImg">
+        <button (click)="cambiarMascota()">Cambiar Mascota</button>
+        <img [src]="imagenMascota" class="petImg">
     </div>
     <!-- partial:sidebar -->
     <app-sidebar style="z-index: 2;"></app-sidebar>
