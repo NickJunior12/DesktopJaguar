@@ -47,8 +47,8 @@ export class AuthService {
   return localStorage.getItem('token') === '1';
  }
 
- tokenSoffid(sm: SoffidModel): Observable<any> {
-  return this.http.post<any>('http://localhost:8000/api/soffid/token', sm);
+ tokenSoffid(code: string): Observable<any> {
+  return this.http.post<any>('http://localhost:8000/api/soffid/token', {'code':code});
 }
 
 }

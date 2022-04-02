@@ -16,24 +16,23 @@ export class AuthssoComponent implements OnInit {
   code: string;
   nonce: string;
   usuario: UsuarioModel;
+  aviso1: string;
+  aviso2: string;
 
   constructor( private router: Router, private auth: AuthService, private aRouter: ActivatedRoute) { 
 
-    this.code = aRouter.snapshot.paramMap.get('code');
-    this.nonce = aRouter.snapshot.paramMap.get('nonce');
+    this.aRouter.queryParams.subscribe(params => {
 
-      console.log('El code es: ' + this.code);
-      console.log('El nonce es: ' + this.nonce);
+      this.code = params.code;
+
+      console.log(this.code);
+
+    });
   }
 
   authSoffid() {
 
-    const sm: SoffidModel = {
-      code: this.code,
-      nonce: this.nonce
-    }
-
-    this.auth.tokenSoffid( sm ).subscribe( data =>{
+    this.auth.tokenSoffid( this.code ).subscribe( data =>{
       console.log(data);
 
       //Consultamos datos del usuario
@@ -50,7 +49,10 @@ export class AuthssoComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.aviso1 = "Obteniendo JWT de SSO......";
+    console.log(this.code);
     this.authSoffid();
+  
   }
 
 }

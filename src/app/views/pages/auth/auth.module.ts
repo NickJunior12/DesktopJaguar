@@ -26,7 +26,7 @@ const routes: Routes = [
         component: RegisterComponent
       },
       {
-        path: 'authsso/:code/:nonce',
+        path: 'authsso',
         component: AuthssoComponent
       }
     ]
