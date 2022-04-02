@@ -48,7 +48,7 @@ export class AuthService {
  }
 
  tokenSoffid(code: string): Observable<any> {
-  return this.http.post<any>('http://localhost:8000/api/soffid/token', {'code':code});
+  return this.http.post<any>('https://backend-jaguar.herokuapp.com/api/soffid/token', {'code':code});
 }
 
 }
