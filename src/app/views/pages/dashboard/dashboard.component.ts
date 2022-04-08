@@ -4,6 +4,7 @@ import { NoticiaModel } from 'src/app/core/models/noticia-model';
 import { NoticiasService } from '../../../core/services/noticias.service';
 import { BannersService } from '../../../core/services/banners.service';
 import { BannerModel } from 'src/app/core/models/banner-model';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 
 @Component({
@@ -16,8 +17,9 @@ export class DashboardComponent implements OnInit {
 
   listaNoticias: NoticiaModel[] = [];
   listaBanners: BannerModel[] = [];
+  nombreUsuario: string;
 
-  constructor(private noticiaService: NoticiasService, private bannerService: BannersService) {}
+  constructor(private noticiaService: NoticiasService, private bannerService: BannersService, private auth: AuthService) {}
 
   getNoticias() {
     this.noticiaService.getNoticias()
@@ -38,6 +40,14 @@ export class DashboardComponent implements OnInit {
     }, error => {
       console.log('error');
     });
+  }
+
+  setNombreUsuario(){
+    this.nombreUsuario = this.auth.getNombreUsuario();
+  }
+
+  getNombreUsuario(){
+    return this.nombreUsuario;
   }
 
   ngOnInit(): void {

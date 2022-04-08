@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
 
   returnUrl: any;
   usuario: UsuarioModel;
+  min: number = 10000000000000000000;
+  max: number = 99999999999999999999;
 
   constructor( private router: Router, private auth: AuthService) { }
 
@@ -29,6 +31,18 @@ export class LoginComponent implements OnInit {
   //     this.router.navigate([this.returnUrl]);
   //   }
   // }
+
+  ingresar() {
+    this.auth.loginPrueba();
+    this.router.navigateByUrl('/dashboard');
+  }
+  
+  GetNonce(): string {
+  
+      let nonce = Math.random() * (this.max - this.min) + this.min;
+
+      return nonce.toString();
+  }
 
   login( formLogin: NgForm ) {
 
@@ -64,5 +78,7 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl('/dashboard');
 
   }
+
+  
 
 }

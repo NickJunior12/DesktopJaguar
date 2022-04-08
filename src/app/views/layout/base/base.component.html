@@ -28,8 +28,8 @@
 </style>
 <div class="main-wrapper">
 
-    <div class="pet">
-        <button (click)="cambiarMascota()">Cambiar Mascota</button>
+    <div [hidden]="!cicloMascota" class="pet">
+
         <img [src]="imagenMascota" class="petImg">
     </div>
     <!-- partial:sidebar -->
