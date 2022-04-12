@@ -29,7 +29,8 @@
 <div class="main-wrapper">
 
     <div [hidden]="!cicloMascota" class="pet">
-
+        <!-- <b class="text-white">{{this.timeLeft2}}</b>
+        <b class="text-white">{{this.timeLeft}}</b> -->
         <img [src]="imagenMascota" class="petImg">
     </div>
     <!-- partial:sidebar -->
@@ -44,7 +45,8 @@
         <app-navbar></app-navbar>
         <!-- partial -->
 
-        <div class="page-content" style="background-image: url('https://interacthink.com/jaguar/desktop/assets/images/back-dashboard.svg');">
+        <div class="page-content" style="background-image: url('https://interacthink.com/jaguar/desktop/assets/images/back-dashboard.svg');background-repeat: no-repeat;
+        background-size: cover;">
 
             <!-- Spinner for lazyload modules -->
             <!-- <div *ngIf="isLoading" class="spinner-wrapper">

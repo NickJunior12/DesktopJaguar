@@ -37,20 +37,23 @@ export class BaseComponent implements OnInit {
     else{
       this.pauseTimer();
       this.imagenMascota ="";
-      this.cicloMascota = false;
+      this.startTimer2();
+      // this.cicloMascota = false;
     }
     
   }
 
   timeLeft: number = 10;
+  timeLeft2: number = 600;
   interval;
+  interval2;
 
 startTimer() {
     this.interval = setInterval(() => {
       if(this.timeLeft > 0) {
         this.timeLeft--;
       } 
-     
+      
       else {
         this.cambiarMascota();
         this.timeLeft = 10;
@@ -60,6 +63,24 @@ startTimer() {
 pauseTimer() {
     clearInterval(this.interval);
   }
+
+  startTimer2() {
+    this.interval2 = setInterval(() => {
+      if(this.timeLeft2 > 0) {
+        this.timeLeft2--;
+      } 
+      
+      else {
+        this.startTimer();
+        this.imagenMascota = "https://interacthink.com/jaguar/desktop/assets/images/ConejoSaludito.gif";
+        this.timeLeft2 = 600;
+        clearInterval(this.interval2);
+      }
+    },1000)
+  }
+
+
+
   ngOnInit(): void {
     this.imagenMascota = "https://interacthink.com/jaguar/desktop/assets/images/ConejoSaludito.gif";
     this.startTimer();

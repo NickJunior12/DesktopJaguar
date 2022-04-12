@@ -1,53 +1,75 @@
 .dashboard-date {
-  width: 211px;
+    width: 211px;
     &.input-group {
-      input {
-        background: transparent;
-        width: 140px;
-        color: $text-muted;
-        border: 1px solid theme-color(primary);
-      }
+        input {
+            background: transparent;
+            width: 140px;
+            color: $text-muted;
+            border: 1px solid theme-color(primary);
+        }
     }
 }
 
 #flotChart1 {
-  height: 350px;
-  @media(max-width: 767px) {
-    height: 200px;
-  }
+    height: 350px;
+    @media(max-width: 767px) {
+        height: 200px;
+    }
 }
+
 #progressbar1 {
-  width: 200px;
-  height: 200px;
-  position: relative;
-  svg {
-    height: 200px;
     width: 200px;
-    fill: none;
-    stroke-width: 10;
-    stroke-linecap: round;
-  }
+    height: 200px;
+    position: relative;
+    svg {
+        height: 200px;
+        width: 200px;
+        fill: none;
+        stroke-width: 10;
+        stroke-linecap: round;
+    }
 }
 
 .monthly-sales-chart-wrapper {
-  height: 270px;
-  @media(max-width: 767px) {
-    height: 200px;
-  }
+    height: 270px;
+    @media(max-width: 767px) {
+        height: 200px;
+    }
 }
-
 
 // RTL changes
 .rtl {
-  .dashboard-date {
-      .input-group-prepend {
-        button {
-          border-top-right-radius: $btn-border-radius;
-          border-bottom-right-radius: $btn-border-radius;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-          border-left: 0;
+    .dashboard-date {
+        .input-group-prepend {
+            button {
+                border-top-right-radius: $btn-border-radius;
+                border-bottom-right-radius: $btn-border-radius;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-left: 0;
+            }
         }
-      }
-  }
+    }
+}
+
+.zoom {
+    transition: 0.8s ease;
+    -moz-transition: 0.8s ease;
+    /* Firefox */
+    -webkit-transition: 0.8s ease;
+    /* Chrome - Safari */
+    -o-transition: 0.8s ease;
+    /* Opera */
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    /* Firefox */
+    -webkit-transform: scale(1.1);
+    /* Chrome - Safari */
+    -o-transform: scale(1.1);
+    /* Opera */
+    -ms-transform: scale(1.1);
+    /* IE9 */
 }
