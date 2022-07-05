@@ -31,7 +31,7 @@
                         <span class="link-arrow" data-feather="chevron-down" appFeatherIcon></span>
                     </a>
 
-                    <a class="nav-link nav-link-ref" [routerLink]="item.link" *ngIf="!hasItems(item)" [attr.data-parent]="item.parentId">
+                    <a class="nav-link nav-link-ref" [href]="item.link" *ngIf="!hasItems(item)" [attr.data-parent]="item.parentId">
                         <i class="link-icon" [attr.data-feather]="item.icon" appFeatherIcon *ngIf="item.icon"></i>
                         <span class="link-title"> {{ item.label }}</span>
                         <span class="badge badge-{{item.badge.variant}}" *ngIf="item.badge">{{item.badge.text}}</span>
@@ -46,13 +46,13 @@
                                 <span class="link-arrow" data-feather="chevron-down" appFeatherIcon></span>
                             </a>
 
-                            <a class="nav-link nav-link-ref" [routerLink]="subitem.link" *ngIf="!hasItems(subitem)" [attr.data-parent]="subitem.parentId">
+                            <a class="nav-link nav-link-ref" [href]="subitem.link" *ngIf="!hasItems(subitem)" [attr.data-parent]="subitem.parentId">
                                 <i class="link-icon" [attr.data-feather]="subitem.icon" appFeatherIcon *ngIf="subitem.icon"></i> {{ subitem.label }}
                             </a>
 
                             <ul class="sidebar-nav sub-menu nav-third-level" *ngIf="hasItems(subitem)" aria-expanded="false">
                                 <li class="nav-item" *ngFor="let subSubitem of subitem.subItems">
-                                    <a class="nav-link nav-link-ref" [routerLink]="subSubitem.link" [routerLinkActive]="['active']" [attr.data-parent]="subSubitem.parentId">
+                                    <a class="nav-link nav-link-ref" [href]="subSubitem.link" [attr.data-parent]="subSubitem.parentId">
                                         <i class="link-icon" [attr.data-feather]="subitem.icon" appFeatherIcon *ngIf="subitem.icon"></i> {{ subSubitem.label }}
                                     </a>
                                 </li>

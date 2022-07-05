@@ -12,7 +12,7 @@ import { UsuarioModel } from '../../../../core/models/usuario-model';
 export class AuthssoComponent implements OnInit {
 
   code: string;
-  nonce: string;
+  // nonce: string;
   usuario: UsuarioModel;
   aviso1: string;
   aviso2: string;

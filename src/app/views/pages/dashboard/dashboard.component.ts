@@ -31,6 +31,7 @@ export class DashboardComponent implements OnInit {
                 console.log('error');
             });
   }
+  
 
   getBanners(){
     this.bannerService.getBanners().subscribe (resp => {
