@@ -8,12 +8,12 @@ export const MENU: MenuItem[] = [
   {
     label: 'Escritorio',
     icon: 'home',
-    link: '/dashboard'
+    link: '/#/dashboard'
   },
   {
     label: 'Noticias',
     icon: 'message-circle',
-    link: '/noticias'
+    link: '/#/noticias'
   },
   {
     label: 'Aplicaciones',
