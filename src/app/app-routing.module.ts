@@ -26,6 +26,10 @@ const routes: Routes = [
         loadChildren: () => import('./views/pages/noticia-detalle/noticia-detalle.module').then(m => m.NoticiaDetalleModule)
       },
       {
+        path: 'beneficios',
+        loadChildren: () => import('./views/pages/beneficios/beneficios.module').then(m => m.BeneficiosModule)
+      },
+      {
         path: 'resultado-buscador/:texto',
         loadChildren: () => import('./views/pages/resultado-buscador/resultado-buscador.module').then(m => m.ResultadoBuscadorModule)
       },

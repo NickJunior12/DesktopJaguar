@@ -16,6 +16,11 @@ export const MENU: MenuItem[] = [
     link: '/#/noticias'
   },
   {
+    label: 'Beneficios',
+    icon: 'message-circle',
+    link: '/#/beneficios'
+  },
+  {
     label: 'Aplicaciones',
     isTitle: true
   },
