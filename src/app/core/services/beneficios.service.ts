@@ -16,6 +16,6 @@ export class BeneficiosService {
   }
 
   getBeneficio(id: string): Observable<any> {
-    return this.http.get<any>('https://backend-jaguar.herokuapp.com/api/beneficio/' + id);
+    return this.http.get<any>('https://backend-jaguar.herokuapp.com/api/beneficios/' + id);
   }
 }

@@ -4,4 +4,5 @@ export class BeneficioModel {
     descripcion: string;
     activado: number;
     imagen: string;
+    documento: string;
 }
